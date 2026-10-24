@@ -1,6 +1,8 @@
 import { spawn } from "child_process";
 
-const command = `ls -la`;
+// 不需要 echo 管道，直接指定模板和非交互模式
+const command = 'pnpm create vite react-todo-app --template react-ts --no-interactive';
+
 const cwd = process.cwd();
 
 const [cmd, ...args] = command.split(" ");
