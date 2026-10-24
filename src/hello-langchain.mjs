@@ -1,13 +1,15 @@
 import { ChatOpenAI } from "@langchain/openai";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const model = new ChatOpenAI({
-  modelName: "qwen-coder-trubo",
-  apiKey:
-    "sk-ws-H.YMXIELL.Yhid.MEUCIDOn99ilrjqG2lP7LVztMupx9JP76MrvhsUMfte7W_5iAiEAwxZEdpbxdIK0FFEWJKU-DCmqSIRMNgYWqB1E31b-yoA",
+  modelName: process.env.MODEL_NAME,
+  apiKey: process.env.OPENAI_API_KEY,
   configuration: {
-    baseURL: "https://ws-cxagqzc6qn684qi9.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-  }
+    baseURL: process.env.OPENAI_BASE_URL,
+  },
 });
 
-const response = await model.invoke('介绍一下自己');
-console.log('response: ', response);
+const response = await model.invoke("介绍一下自己");
+console.log("response: ", response);
