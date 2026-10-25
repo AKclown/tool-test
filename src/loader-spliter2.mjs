@@ -42,6 +42,7 @@ const textSplitter = new RecursiveCharacterTextSplitter({
   // 每個分塊的字符數據
   chunkSize: 500,
   // 分塊之間的重叠字符數
+  // 一般设置chunkSize的10%-20%之间
   chunkOverlap: 50,
   // 分隔符、優先使用段落分割
   separators: ["。", "！", "？"],
