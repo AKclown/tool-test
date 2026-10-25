@@ -71,6 +71,7 @@ server.registerTool(
 );
 
 // 注册资源、只读数据，供加载上下文
+// Resource = 服务端声明的只读上下文素材；读取与注入的决策权在客户端 Agent；模型是否最终看到它，取决于客户端的选择。
 server.registerResource(
   "使用指南",
   "docs://guide",
@@ -80,7 +81,7 @@ server.registerResource(
   },
   async () => {
     return {
-      content: [
+      contents: [
         {
           uri: "docs://guide",
           mimeType: "text/plain",

@@ -1,6 +1,10 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { MultiServerMCPClient } from "@langchain/mcp-adapters";
-import { HumanMessage, ToolMessage } from "@langchain/core/messages";
+import {
+  HumanMessage,
+  SystemMessage,
+  ToolMessage,
+} from "@langchain/core/messages";
 
 import dotenv from "dotenv";
 
@@ -32,8 +36,24 @@ const tools = await mcpClient.listTools();
 
 const modelWithTools = model.bindTools(tools);
 
+const res = await mcpClient.listResources();
+
+let resourceContent = "";
+console.log("res: ", res);
+
+for (const [serverName, resources] of Object.entries(res)) {
+  for (const resource of resources) {
+    const content = await mcpClient.readResource(serverName, resource.uri);
+    resourceContent += content[0].text;
+    console.log("content: ", content);
+  }
+}
+
 async function runAgentWithTools(query, maxIterations = 30) {
-  const messages = [new HumanMessage(query)];
+  const messages = [
+    new SystemMessage(resourceContent),
+    new HumanMessage(query),
+  ];
 
   for (let i = 0; i < maxIterations; i++) {
     console.log(chalk.bgGreen(`正在等待 AI 思考...`));
@@ -81,7 +101,7 @@ async function runAgentWithTools(query, maxIterations = 30) {
   return messages.at(-1).content;
 }
 
-const case1 = `查询一下用户 001 用户信息`;
+const case1 = `Mcp SERVER指南是什么`;
 
 try {
   await runAgentWithTools(case1, 30);
