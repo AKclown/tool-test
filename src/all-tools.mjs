@@ -111,19 +111,28 @@ const execCommandTool = tool(
 );
 
 // 列出目录内容工具
-const listDirectoryTool = tool(async ({ directoryPath }) => {
-  try {
-    const files = await fs.readdir(directoryPath);
-    console.log(
-      `[工具调用] list_directory(${directoryPath}) - 成功列出 ${files.length} 个文件/目录`,
-    );
-    return `目录内容:\n${files.map((f) => `- ${f}`).join("\n")}`;
-  } catch (error) {
-    console.error(
-      `[工具调用] list_directory(${directoryPath}): 列出目录内容失败 - ${error.message}`,
-    );
-    return `列出目录内容失败:\n${error.message}`;
-  }
-});
+const listDirectoryTool = tool(
+  async ({ directoryPath }) => {
+    try {
+      const files = await fs.readdir(directoryPath);
+      console.log(
+        `[工具调用] list_directory(${directoryPath}) - 成功列出 ${files.length} 个文件/目录`,
+      );
+      return `目录内容:\n${files.map((f) => `- ${f}`).join("\n")}`;
+    } catch (error) {
+      console.error(
+        `[工具调用] list_directory(${directoryPath}): 列出目录内容失败 - ${error.message}`,
+      );
+      return `列出目录内容失败:\n${error.message}`;
+    }
+  },
+  {
+    name: "list_directory",
+    description: "列出指定目录的内容",
+    schema: z.object({
+      directoryPath: z.string().describe("目录路径"),
+    }),
+  },
+);
 
 export { readFileTool, writeFileTool, execCommandTool, listDirectoryTool };
