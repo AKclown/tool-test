@@ -1,4 +1,4 @@
-// 缓存截断
+// 缓存截断策略
 import { InMemoryChatMessageHistory } from "@langchain/core/chat_history";
 import {
   HumanMessage,
