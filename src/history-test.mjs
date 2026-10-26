@@ -1,3 +1,4 @@
+// 内存中的短期记忆
 import "dotenv/config";
 import { ChatOpenAI } from "@langchain/openai";
 import { InMemoryChatMessageHistory } from "@langchain/core/chat_history";
