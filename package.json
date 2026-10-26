@@ -22,6 +22,7 @@
     "chalk": "^6.0.1",
     "cheerio": "^1.2.0",
     "dotenv": "^18.0.9",
+    "js-tiktoken": "^1.0.21",
     "langchain": "^1.5.19",
     "zod": "^4.6.7"
   }
