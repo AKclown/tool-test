@@ -1,4 +1,4 @@
-// 内存中的短期记忆
+// 存入到文件系统里面进行长期记忆
 import "dotenv/config";
 import { ChatOpenAI } from "@langchain/openai";
 import { FileSystemChatMessageHistory } from "@langchain/community/stores/message/file_system";
