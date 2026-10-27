@@ -24,6 +24,8 @@
     "dotenv": "^18.0.9",
     "js-tiktoken": "^1.0.21",
     "langchain": "^1.5.19",
-    "zod": "^4.6.7"
+    "mysql2": "^3.24.6",
+    "zod": "^4.6.7",
+    "zod-to-json-schema": "^3.25.2"
   }
 }
