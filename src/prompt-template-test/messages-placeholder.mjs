@@ -1,3 +1,4 @@
+// 在chat prompt中插入聊天历史记录
 import 'dotenv/config';
 import { ChatOpenAI } from '@langchain/openai';
 import {
