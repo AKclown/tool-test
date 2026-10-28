@@ -1,3 +1,4 @@
+// 一般推荐使用这种方式
 import 'dotenv/config';
 import { ChatOpenAI } from '@langchain/openai';
 import { z } from 'zod';

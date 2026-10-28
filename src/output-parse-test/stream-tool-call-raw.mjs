@@ -40,6 +40,7 @@ try {
 
   let chunkIndex = 0;
 
+ // 这里的chunk 返回的是AImessage，并且tool_call_chunks并不是合法的json对象。 这个需要查看stream-tool-call-parser，添加JsonOutputToolsParser，获取到增量的且合法的json args
   for await (const chunk of stream) {
     chunkIndex++;
     // 直接打印每个 chunk 的 tool_calls 信息
