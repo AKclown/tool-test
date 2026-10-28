@@ -34,6 +34,10 @@ const chain = RunnableSequence.from([
     outputParser
 ]);
 
+
+// 还可以采用pipe的方式，进行流水线构建
+// const chain = promptTemplate.pipe(model).pipe(outputParser)
+
 const input = {
   text: "LangChain 是一个强大的 AI 应用开发框架",
   format_instructions: outputParser.getFormatInstructions(),
