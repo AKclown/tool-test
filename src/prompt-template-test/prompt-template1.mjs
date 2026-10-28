@@ -1,3 +1,4 @@
+// 现在这个都是一整个Prompt，实际上可能按照角色、背景、任务、格式等来拆分管理prompt。这样用的时候在组合
 import "dotenv/config";
 import { ChatOpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
