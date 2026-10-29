@@ -1,4 +1,4 @@
-// $ RouterRunnable 相当于switch case
+// $RouterRunnable 相当于switch case
 import 'dotenv/config';
 import { RouterRunnable, RunnableLambda } from "@langchain/core/runnables";
 
