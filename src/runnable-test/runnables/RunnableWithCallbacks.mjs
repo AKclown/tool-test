@@ -1,4 +1,4 @@
-// 让每一步的chain都变为可观测
+// $ 让每一步的chain都变为可观测
 import "dotenv/config";
 import { RunnableLambda, RunnableSequence } from "@langchain/core/runnables";
 

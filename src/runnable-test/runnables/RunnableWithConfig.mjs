@@ -1,4 +1,4 @@
-// 使用withConfig给chain添加配置，通过第二个参数获取到
+// $ 使用withConfig给chain添加配置，通过第二个参数获取到
 import "dotenv/config";
 import { RunnableLambda, RunnableSequence } from "@langchain/core/runnables";
 

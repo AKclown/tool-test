@@ -1,3 +1,7 @@
 node_modules
 milvus/volumes/
 
+
+.env
+.env.*
+!.env.example
