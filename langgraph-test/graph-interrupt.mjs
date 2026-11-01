@@ -67,7 +67,7 @@ console.log("\n待你确认：", paused.__interrupt__?.[0]?.value);
 // output 指定向哪里输出内容
 // 创建一个连接终端键盘输入和终端输出的交互接口
 const rl = createInterface({ input: process.stdin, output: process.stdout });
-// rl.question 在終端提示文字，等待用戶輸入，用戶按下Enter后，返回輸入的内容
+// $ rl.question 在終端提示文字，等待用戶輸入，用戶按下Enter后，返回輸入的内容
 const line = (await rl.question("> ")).trim();
 await rl.close();
 
