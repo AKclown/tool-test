@@ -26,6 +26,7 @@
     "dotenv": "^18.0.9",
     "js-tiktoken": "^1.0.21",
     "langchain": "^1.5.19",
+    "langsmith": "^0.11.7",
     "mysql2": "^3.24.6",
     "tencentcloud-sdk-nodejs": "^4.1.336",
     "tencentcloud-sdk-nodejs-tts": "^4.1.336",
