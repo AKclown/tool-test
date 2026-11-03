@@ -13,7 +13,7 @@
   "dependencies": {
     "@langchain/classic": "^1.0.55",
     "@langchain/community": "^1.1.29",
-    "@langchain/core": "^1.3.0",
+    "@langchain/core": "^1.3.4",
     "@langchain/langgraph": "^1.6.0",
     "@langchain/langgraph-supervisor": "^1.1.3",
     "@langchain/mcp-adapters": "^2.0.1",
