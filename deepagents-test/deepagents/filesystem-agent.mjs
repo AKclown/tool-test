@@ -2,6 +2,7 @@
 // $ 实现了一个带文件操作能力的Agent，并通过权限规则限制Agent能读取，创建和修改哪些文件
 
 // 给 Agent 一个虚拟工作区，让它能够通过 ls、read_file、write_file、edit_file 操作文件，同时由中间件负责检查文件操作是否有权限。
+// $ 只要加上deepagents这个fileSystem中间件，agent就有一个文件系统，并且有了读写搜索文件的各种tool，还做了权限控制
 import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
@@ -12,7 +13,7 @@ import { createFilesystemMiddleware, FilesystemBackend } from "deepagents";
 
 const workspaceDir = path.join(
   path.dirname(fileURLToPath(import.meta.url)),
-  "workspace",
+  "w",
 );
 
 /** 先匹配先生效；未命中任何规则则默认允许 */
