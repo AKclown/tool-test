@@ -27,6 +27,7 @@
     "dedent": "^1.7.2",
     "deepagents": "^1.16.2",
     "dotenv": "^18.0.9",
+    "ioredis": "^6.0.0",
     "js-tiktoken": "^1.0.21",
     "langchain": "^1.5.19",
     "langsmith": "^0.11.7",
