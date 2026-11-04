@@ -5,3 +5,5 @@ milvus/volumes/
 .env
 .env.*
 !.env.example
+
+**/volumes/**
