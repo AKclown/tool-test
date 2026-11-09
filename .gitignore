@@ -7,3 +7,4 @@ milvus/volumes/
 !.env.example
 
 **/volumes/**
+rabbitmq-test/rabbitmq_data/**
