@@ -1,4 +1,4 @@
-import { connect } from '../config.js';
+import { connect } from '../config.mjs';
 
 /** 交换机名称。Producer 只往 Exchange 发消息，从不直接写某个 Queue。 */
 const EXCHANGE = 'doc.parse.fanout';

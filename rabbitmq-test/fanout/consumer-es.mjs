@@ -1,4 +1,4 @@
-import { connect } from '../config.js';
+import { connect } from '../config.mjs';
 
 const EXCHANGE = 'doc.parse.fanout';
 /** 本消费者专属队列：只负责「全文检索写入 ElasticSearch」 */
